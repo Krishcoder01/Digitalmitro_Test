@@ -31,7 +31,7 @@ const App = () => {
 
   const callProduct = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/product");
+      const response = await axios.get("https://digitalmitro-test.onrender.com/api/product");
       console.log(response.data); // Log the fetched data
       setproduct(response.data.data);
     } catch (error) {

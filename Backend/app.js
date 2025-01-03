@@ -10,12 +10,7 @@ const db = require('./config/mongoDb');
 
 
 //Cors & Middlewares
-app.use(cors(
-    {
-        origin : "http://localhost:5173" ,
-        methods : ['GET' , 'POST' , 'DELETE'],
-    }
-));
+app.use(cors());
 env.config();
 db();
 
@@ -81,7 +76,7 @@ app.delete('/api/product/:id' , async(req , res)=>{
 
 
 //Server
-app.listen(3000, () => {
-    console.log('Server started on http://localhost:3000');
-}
-);
+// app.listen(3000, () => {
+//     console.log('Server started on http://localhost:3000');
+// }
+// );
